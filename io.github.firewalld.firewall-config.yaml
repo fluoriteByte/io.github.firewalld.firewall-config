@@ -1,0 +1,50 @@
+id: io.github.firewalld.firewall-config
+runtime: org.gnome.Platform
+runtime-version: "49"
+sdk: org.gnome.Sdk
+command: firewall-config
+finish-args:
+  - --socket=wayland
+  - --device=dri
+  - --socket=fallback-x11
+  - --share=ipc
+  - --system-talk-name=org.freedesktop.NetworkManager
+  - --system-talk-name=org.fedoraproject.FirewallD1
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /man
+  - /share/doc
+  - /share/gtk-doc
+  - /share/man
+  - /share/pkgconfig
+  - "*.la"
+  - "*.a"
+rename-icon: firewall-config
+rename-desktop-file: firewall-config.desktop
+# rename-appdata-file: virt-manager.appdata.xml
+modules:
+  - name: firewalld
+    sources:
+      - type: git
+        url: https://github.com/firewalld/firewalld.git
+        tag: v2.3.1
+      - type: patch
+        path: ./0001-remove-subdirs.patch
+      - type: patch
+        path: ./0002-datadir.patch
+      - type: patch
+        path: ./0003-desktop.patch
+      - type: patch
+        path: ./0004-icon.patch
+    modules:
+      - shared-modules/intltool/intltool-0.51.json
+
+      - name: dbus-python
+        buildsystem: simple
+        build-commands:
+          - pip3 install --no-deps --prefix=${FLATPAK_DEST} .
+        sources:
+          - type: archive
+            url: https://files.pythonhosted.org/packages/b1/5c/ccfc167485806c1936f7d3ba97db6c448d0089c5746ba105b6eb22dba60e/dbus-python-1.2.18.tar.gz
+            sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260

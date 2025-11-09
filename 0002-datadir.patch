@@ -1,0 +1,14 @@
+
+diff --git a/src/firewall/config/__init__.py.in b/src/firewall/config/__init__.py.in
+index 4951d37c..6fa02570 100644
+--- a/src/firewall/config/__init__.py.in
++++ b/src/firewall/config/__init__.py.in
+@@ -27,7 +27,7 @@ from . import dbus  # noqa: F401
+ DAEMON_NAME = "firewalld"
+ CONFIG_NAME = "firewall-config"
+ APPLET_NAME = "firewall-applet"
+-DATADIR = "/usr/share/" + DAEMON_NAME
++DATADIR = "/app/share/" + DAEMON_NAME
+ CONFIG_GLADE_NAME = CONFIG_NAME + ".glade"
+ COPYRIGHT = "(C) 2010-2017 Red Hat, Inc."
+ VERSION = "@PACKAGE_VERSION@"

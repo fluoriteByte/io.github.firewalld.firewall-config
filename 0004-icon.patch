@@ -1,0 +1,16 @@
+diff --git a/src/firewall-config.in b/src/firewall-config.in
+index 0fb5fc8e..37cb61fc 100755
+--- a/src/firewall-config.in
++++ b/src/firewall-config.in
+@@ -116,8 +116,8 @@ class FirewallConfig:
+         size = min(width, height)
+         self.icon_theme = Gtk.IconTheme.get_default()
+         try:
+-            self.icon = self.icon_theme.load_icon(config.CONFIG_NAME, size, 0)
+-            self.logo = self.icon_theme.load_icon(config.CONFIG_NAME, 48, 0)
++            self.icon = self.icon_theme.load_icon("io.github.firewalld.firewall-config", size, 0)
++            self.logo = self.icon_theme.load_icon("io.github.firewalld.firewall-config", 48, 0)
+         except:
+             print(_("Failed to load icons."))
+             self.icon = self.logo = None
+

@@ -1,0 +1,12 @@
+diff --git a/configure.ac b/configure.ac
+index 1caecb70..c6721117 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -153,7 +153,6 @@ AC_SUBST([GETTEXT_PACKAGE], '[PKG_NAME]')
+ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"],)
+ 
+ IT_PROG_INTLTOOL([0.35.0], [no-xml])
+-AM_PO_SUBDIRS
+ 
+ AC_CONFIG_COMMANDS([xsl-cleanup],,[rm -f doc/xml/transform-*.xsl])
+ 
