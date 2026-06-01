@@ -2,8 +2,8 @@
 # shellcheck disable=SC2034
 # so that shellcheck shuts the fuck up
 
-APP_ID=io.github.firewalld.firewall-config
-MANIFEST=io.github.firewalld.firewall-config.yaml
+APP_ID=org.firewalld.firewall-config
+MANIFEST=$APP_ID.yaml
 
 source_gen() {
   DEPS="meson-python~=0.19.0 patchelf~=0.17.2.4 dbus-python~=1.4.0"
