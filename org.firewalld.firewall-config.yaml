@@ -41,7 +41,8 @@ modules:
         commands:
         - sed -i -e '/content_rating/a \ \ <releases type="external"/>' config/org.firewalld.firewall-config.metainfo.xml.in
         - install -Dm644 org.firewalld.firewall-config.releases.xml -t /app/share/metainfo/releases
-
     modules:
       - shared-modules/intltool/intltool-0.51.json
       - python-dbus.yaml
+      - nm-dep.yaml
+
