@@ -3,9 +3,6 @@
 # Further edits by fluoriteByte
 name: NetworkManager
 buildsystem: meson
-build-options:
-  cflags: -ltinfo
-  cxxflags: -ltinfo
 config-opts:
   - -Dsystemdsystemunitdir=no
   - -Ddbus_conf_dir=/app/etc/dbus-1/system.d
