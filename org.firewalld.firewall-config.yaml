@@ -28,6 +28,7 @@ modules:
       - type: git
         url: https://github.com/firewalld/firewalld.git
         tag: v2.4.1
+        commit: 865b0da0a73927b152ab6d2f7c1da9a03f5d4a51
       - type: patch
         path: ./0001-remove-subdirs.patch
       - type: patch
