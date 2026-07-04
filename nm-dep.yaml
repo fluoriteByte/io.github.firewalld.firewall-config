@@ -73,8 +73,3 @@ modules:
       stable-only: true
       url-template: https://github.com/jpirko/libndp/archive/v$version.tar.gz
 
-# Unecessairy for now since i dont think firewalld uses any plugins lol
-  # To fix `Support for given configuration is not implemented` when trying to connect: https://github.com/flathub/com.protonvpn.www/issues/2
-  # Copied from https://github.com/flathub/com.github.jkotra.eovpn/blob/670f19e2aee1c9559fbe4eed904e35500843ae88/0001-disable-ownership-check-for-plugins.patch
-#      - type: patch
-#        path: patches/NetworkManager/disable-ownership-check-for-plugins.patch
