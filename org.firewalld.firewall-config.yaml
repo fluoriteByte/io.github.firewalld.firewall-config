@@ -42,6 +42,17 @@ modules:
         - install -Dm644 org.firewalld.firewall-config.releases.xml -t /app/share/metainfo/releases
     modules:
       - shared-modules/intltool/intltool-0.51.json
-      - python-dbus.yaml
       - nm-dep.yaml
 
+  - name: dbus-python
+    buildsystem: autotools
+    cleanup:
+      - /include
+    sources:
+      - type: archive
+        url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.4.0.tar.xz
+        sha256: c36b28f10ffcc8f1f798aca973bcc132f91f33eb9b6b8904381b4077766043d5
+        x-checker-data:
+          type: anitya
+          project-id: 402
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.xz
