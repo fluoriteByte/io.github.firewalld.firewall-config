@@ -6,7 +6,6 @@ APP_ID=org.firewalld.firewall-config
 MANIFEST=$APP_ID.yaml
 
 source_gen() {
-  DEPS="meson-python~=0.19.0 patchelf~=0.17.2.4 dbus-python~=1.4.0"
-  # shellcheck disable=SC2086
-  flatpak-pip-generator $DEPS --runtime=org.gnome.Sdk//50 --prefer-wheels=patchelf -o python-dbus.yaml --yaml 
+  #No longer needed!
+  true
 }
