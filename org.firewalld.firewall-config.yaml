@@ -1,4 +1,4 @@
-app-id: org.firewalld.firewall-config
+id: org.firewalld.firewall-config
 runtime: org.gnome.Platform
 runtime-version: "50"
 sdk: org.gnome.Sdk
@@ -22,7 +22,6 @@ cleanup:
   - "*.a"
 rename-icon: firewall-config
 rename-desktop-file: firewall-config.desktop
-# rename-appdata-file: virt-manager.appdata.xml
 modules:
   - name: firewalld
     sources:
