@@ -1,6 +1,6 @@
 #!/bin/bash
-# shellcheck disable=SC2034
-# so that shellcheck shuts the fuck up
+##### QuickPak config file
+##### https://codeberg.org/fluoriteByte/quickpak/
 
 APP_ID=org.firewalld.firewall-config
 MANIFEST=$APP_ID.yaml
@@ -9,3 +9,5 @@ source_gen() {
   #No longer needed!
   true
 }
+
+echo "$FPBUILD $APP_ID $MANIFEST $METAINFO $LINT_FLAG $BUILD_FLAG"
