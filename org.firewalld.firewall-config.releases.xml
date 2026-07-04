@@ -1,456 +1,682 @@
 <?xml version='1.0' encoding='utf-8'?>
 <releases>
   <!--Created with jdAppStreamEdit 9.2-->
-  <release version="2.4.1" date="2026-04-13" type="stable">
+  <release version="v2.4.3" date="2026-06-24" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.4.3</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (1):
+- fix(firewall-cmd): dbus: wait for connection (5e1c37c9)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.4.2" date="2026-06-09" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.4.2</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (2):
+- fix(firewall-config): _load_store_append(): properly get runtime zone (70901339)
+- fix(check-config): check combined zones (782dfc2b)
+
+Tim Dawson (1):
+- fix(build): dist: add missing policy xmlschema (5d386656)
+
+blut-agent (1):
+- fix(firewall-cmd): use config.VERSION for --version (8d053513)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.4.1" date="2026-04-13" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.4.1</url>
     <description>
-      <ul>
-        <li>fix(nftables): batch ipset elements in set_restore to avoid O(n²) insertion cost (300dc1c6)</li>
-        <li>fix(desktop): do not hardcode exec path in desktop files (c9a8d49a)</li>
-        <li>fix(metainfo): modernize AppStream metadata (80a71e54)</li>
-        <li>fix(firewalld): spin trying to acquire dbus (7c7d2446)</li>
-        <li>fix(systemd): do not wait on dbus (27f064f8)</li>
-        <li>fix(zone): forward: support timeout (a62d701d)</li>
-        <li>fix(policy): support timeouts (599398bd)</li>
-        <li>fix(cli): policy: allow timeout with --add-disable (8e2fbafe)</li>
-        <li>fix(cli): policy: allow timeout with --ingress-zone/--egress-zone (78893983)</li>
-        <li>fix(watcher): delete timeout before calling callback (2aa6a25b)</li>
-        <li>fix(watcher): disable while writing configuration (a92f7465)</li>
-        <li>fix(watcher): clear timeouts on reload (9683a100)</li>
-        <li>fix(service): steam-streaming: add ports for VR (58a54baa)</li>
-        <li>docs(helper): fix the broken markup of port attribute (844818ee)</li>
-        <li>fix(bash): add completion for --service (9a82292a)</li>
-        <li>fix(policy): use PK_ACTION_CONFIG for set{ZoneSettings2,PolicySettings} (8cb2dedc)</li>
-        <li>fix(rpm): drop dependency on dbus-x11 (b1276a0a)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Andrew Lukoshko (1):
+- fix(nftables): batch ipset elements in set_restore to avoid O(n²) insertion cost (300dc1c6)
+
+AsciiWolf (2):
+- fix(desktop): do not hardcode exec path in desktop files (c9a8d49a)
+- fix(metainfo): modernize AppStream metadata (80a71e54)
+
+Eric Garver (9):
+- fix(firewalld): spin trying to acquire dbus (7c7d2446)
+- fix(systemd): do not wait on dbus (27f064f8)
+- fix(zone): forward: support timeout (a62d701d)
+- fix(policy): support timeouts (599398bd)
+- fix(cli): policy: allow timeout with --add-disable (8e2fbafe)
+- fix(cli): policy: allow timeout with --ingress-zone/--egress-zone (78893983)
+- fix(watcher): delete timeout before calling callback (2aa6a25b)
+- fix(watcher): disable while writing configuration (a92f7465)
+- fix(watcher): clear timeouts on reload (9683a100)
+
+Jiri Peska (1):
+- fix(service): steam-streaming: add ports for VR (58a54baa)
+
+Masatake YAMATO (1):
+- docs(helper): fix the broken markup of port attribute (844818ee)
+
+Mathieu Patenaude (1):
+- fix(bash): add completion for --service (9a82292a)
+
+Sizhe Zhao (1):
+- fix(policy): use PK_ACTION_CONFIG for set{ZoneSettings2,PolicySettings} (8cb2dedc)
+
+Timothée Ravier (1):
+- fix(rpm): drop dependency on dbus-x11 (b1276a0a)
+
+</p>
     </description>
   </release>
-  <release version="2.4.0" date="2025-11-06" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.4.0</url>
-    <description>
-      <ul>
-        <li>feat(policy): add disable flag (2493d196)</li>
-        <li>feat(client): policy: add disable flag (c2e8aa75)</li>
-        <li>feat(cli): policy: add disable flag (481ec23a)</li>
-        <li>feat(policy): increase maximum name length to 128 (41934b8c)</li>
-        <li>feat(cli): policy: support setting disable on sets (7046a3f7)</li>
-        <li>feat(policy): set: add gateway (b1899428)</li>
-        <li>feat(service): add gitea (b41dc331)</li>
-        <li>feat(service): add syslog-ng (b2e72d8d)</li>
-        <li>feat(service): add proxy-http (f0cf85ab)</li>
-        <li>feat(service): add socks (c1c64416)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.3.3" date="2026-04-13" type="stable">
+  <release version="v2.3.3" date="2026-04-13" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.3.3</url>
     <description>
-      <ul>
-        <li>fix(nftables): batch ipset elements in set_restore to avoid O(n²) insertion cost (05d69195)</li>
-        <li>fix(firewalld): spin trying to acquire dbus (0914e751)</li>
-        <li>fix(systemd): do not wait on dbus (3dca5a9c)</li>
-        <li>fix(zone): forward: support timeout (d9e04824)</li>
-        <li>fix(policy): support timeouts (4c2a278b)</li>
-        <li>fix(cli): policy: allow timeout with --ingress-zone/--egress-zone (559fbbf8)</li>
-        <li>fix(watcher): delete timeout before calling callback (f97e4d05)</li>
-        <li>fix(watcher): disable while writing configuration (98ac66fa)</li>
-        <li>fix(watcher): clear timeouts on reload (6be92ba9)</li>
-        <li>fix(service): steam-streaming: add ports for VR (0d0323f1)</li>
-        <li>fix(bash): add completion for --service (05fb2fe7)</li>
-        <li>fix(policy): use PK_ACTION_CONFIG for set{ZoneSettings2,PolicySettings} (f29c8eb2)</li>
-        <li>fix(rpm): drop dependency on dbus-x11 (da162df8)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Andrew Lukoshko (1):
+- fix(nftables): batch ipset elements in set_restore to avoid O(n²) insertion cost (05d69195)
+
+Eric Garver (8):
+- fix(firewalld): spin trying to acquire dbus (0914e751)
+- fix(systemd): do not wait on dbus (3dca5a9c)
+- fix(zone): forward: support timeout (d9e04824)
+- fix(policy): support timeouts (4c2a278b)
+- fix(cli): policy: allow timeout with --ingress-zone/--egress-zone (559fbbf8)
+- fix(watcher): delete timeout before calling callback (f97e4d05)
+- fix(watcher): disable while writing configuration (98ac66fa)
+- fix(watcher): clear timeouts on reload (6be92ba9)
+
+Jiri Peska (1):
+- fix(service): steam-streaming: add ports for VR (0d0323f1)
+
+Mathieu Patenaude (1):
+- fix(bash): add completion for --service (05fb2fe7)
+
+Sizhe Zhao (1):
+- fix(policy): use PK_ACTION_CONFIG for set{ZoneSettings2,PolicySettings} (f29c8eb2)
+
+Timothée Ravier (1):
+- fix(rpm): drop dependency on dbus-x11 (da162df8)
+
+</p>
     </description>
   </release>
-  <release version="2.3.2" date="2025-11-13" type="stable">
+  <release version="v2.3.2" date="2025-11-13" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.3.2</url>
     <description>
-      <ul>
-        <li>fix(desktop): do not hardcode exec path in desktop files (b7332eb7)</li>
-        <li>fix(metainfo): modernize AppStream metadata (f1660653)</li>
-        <li>doc(policy): add examples to man page (45ff99c5)</li>
-        <li>doc(policies): correct word is asymmetric (bdd060fd)</li>
-        <li>fix(doc): dbus: remove links to nonexistent IDs (32272e40)</li>
-        <li>fix(policy): allow forward ports with ingress zone and egress HOST (cd067e5c)</li>
-        <li>fix(server): load firewall rules before claiming dbus (774a0992)</li>
-        <li>fix(nftables): ipset: add entries from GLib loop when idle (fa90b317)</li>
-        <li>fix(systemd): Requires dbus (e1fe3e57)</li>
-        <li>fix(nftables): use current pkttype keywords (209fe7c3)</li>
-        <li>fix(systemd): use ProtectHome=tmpfs (cc5f9908)</li>
-        <li>fix(policy): allow-host-ipv6: allow MLD packets (c75c04ce)</li>
-        <li>fix(icmpv6): validate router codes (0175dfdc)</li>
-        <li>fix(icmpv6): validate neighbor codes (4f3366c3)</li>
-        <li>fix(icmpv6): validate redirect codes (3a030438)</li>
-        <li>docs(helper): fix the broken markup of port attribute (095b7a9d)</li>
-        <li>docs(zone): update default zone target description to mention that ICMP is accepted (63b76295)</li>
-        <li>docs(zone): grammar fixes (ddc2e25d)</li>
-        <li>docs(zone): mention that the ACCEPT target allows forwarding out of the zone (0758a83a)</li>
-        <li>docs(zone): remove references to specific zone names in description of target attribute (58aa7ae2)</li>
-        <li>docs: use US spelling of behavior (1cfc847c)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+AsciiWolf (2):
+- fix(desktop): do not hardcode exec path in desktop files (b7332eb7)
+- fix(metainfo): modernize AppStream metadata (f1660653)
+
+Eric Garver (13):
+- doc(policy): add examples to man page (45ff99c5)
+- doc(policies): correct word is asymmetric (bdd060fd)
+- fix(doc): dbus: remove links to nonexistent IDs (32272e40)
+- fix(policy): allow forward ports with ingress zone and egress HOST (cd067e5c)
+- fix(server): load firewall rules before claiming dbus (774a0992)
+- fix(nftables): ipset: add entries from GLib loop when idle (fa90b317)
+- fix(systemd): Requires dbus (e1fe3e57)
+- fix(nftables): use current pkttype keywords (209fe7c3)
+- fix(systemd): use ProtectHome=tmpfs (cc5f9908)
+- fix(policy): allow-host-ipv6: allow MLD packets (c75c04ce)
+- fix(icmpv6): validate router codes (0175dfdc)
+- fix(icmpv6): validate neighbor codes (4f3366c3)
+- fix(icmpv6): validate redirect codes (3a030438)
+
+Masatake YAMATO (1):
+- docs(helper): fix the broken markup of port attribute (095b7a9d)
+
+Sam Morris (5):
+- docs(zone): update default zone target description to mention that ICMP is accepted (63b76295)
+- docs(zone): grammar fixes (ddc2e25d)
+- docs(zone): mention that the ACCEPT target allows forwarding out of the zone (0758a83a)
+- docs(zone): remove references to specific zone names in description of target attribute (58aa7ae2)
+- docs: use US spelling of behavior (1cfc847c)
+
+</p>
     </description>
   </release>
-  <release version="2.3.1" date="2025-06-10" type="stable">
+  <release version="v2.4.0" date="2025-11-06" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.4.0</url>
+    <description>
+      <p>This is a feature release. It also includes all bug fixes since v2.3.0.
+
+Eric Garver (6):
+- feat(policy): add disable flag (2493d196)
+- feat(client): policy: add disable flag (c2e8aa75)
+- feat(cli): policy: add disable flag (481ec23a)
+- feat(policy): increase maximum name length to 128 (41934b8c)
+- feat(cli): policy: support setting disable on sets (7046a3f7)
+- feat(policy): set: add gateway (b1899428)
+
+Stanislaw (2):
+- feat(service): add gitea (b41dc331)
+- feat(service): add syslog-ng (b2e72d8d)
+
+Илья Индиго (2):
+- feat(service): add proxy-http (f0cf85ab)
+- feat(service): add socks (c1c64416)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.3.1" date="2025-06-10" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.3.1</url>
     <description>
-      <ul>
-        <li>fix: Fix translating appdata file (6577f5ac)</li>
-        <li>fix(config): correctly set IPv6_rpfilter via dbus IPv6_rpfilter2 (663e6198)</li>
-        <li>fix(systemd): verify firewalld is responsive to dbus (a6dc42e6)</li>
-        <li>fix(systemd): remove unnecessary comment (5d06626d)</li>
-        <li>fix(fw): start: remove ipset probe (45d20e4c)</li>
-        <li>fix(systemd): allow start code 251 (RUNNING_BUT_FAILED) (e3c938a0)</li>
-        <li>fix(policy): rich: verify ipset exists (048502de)</li>
-        <li>docs(policy): fix typo (a8f8b60f)</li>
-        <li>fix: include missing helper.xsd file to release tarball (6d4247a0)</li>
-        <li>fix(firewall-config): fix rich rule creation (3ee172b2)</li>
-        <li>fix(firewall-config): don't create rich rule with invalid element (b6e56a1f)</li>
-        <li>fix(firewall-config): allow selecting the first service in the list (2feab45f)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Balló György (1):
+- fix: Fix translating appdata file (6577f5ac)
+
+Eric Garver (6):
+- fix(config): correctly set IPv6_rpfilter via dbus IPv6_rpfilter2 (663e6198)
+- fix(systemd): verify firewalld is responsive to dbus (a6dc42e6)
+- fix(systemd): remove unnecessary comment (5d06626d)
+- fix(fw): start: remove ipset probe (45d20e4c)
+- fix(systemd): allow start code 251 (RUNNING_BUT_FAILED) (e3c938a0)
+- fix(policy): rich: verify ipset exists (048502de)
+
+Joseph Larionov (1):
+- docs(policy): fix typo (a8f8b60f)
+
+Mikel Olasagasti Uranga (1):
+- fix: include missing helper.xsd file to release tarball (6d4247a0)
+
+Oleksandr Zakharov (3):
+- fix(firewall-config): fix rich rule creation (3ee172b2)
+- fix(firewall-config): don't create rich rule with invalid element (b6e56a1f)
+- fix(firewall-config): allow selecting the first service in the list (2feab45f)
+
+</p>
     </description>
   </release>
-  <release version="2.3.0" date="2024-11-05" type="stable">
+  <release version="v2.3.0" date="2024-11-05" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.3.0</url>
     <description>
-      <ul>
-        <li>feat(conf): add StrictForwardPorts (2bcab5a7)</li>
-        <li>feat(service): add aseqnet (371f5a26)</li>
-        <li>feat(service): add MPD (Music Player Daemon) (bf7bbee4)</li>
-        <li>feat(service): Add Radsec protocol (01546d04)</li>
-        <li>feat(service): add SlimeVR (b0e0a757)</li>
-      </ul>
+      <p>This is a feature release. It also includes all bug fixes since v2.2.0.
+
+Eric Garver (1):
+- feat(conf): add StrictForwardPorts (2bcab5a7)
+
+Nikolas Koesling (1):
+- feat(service): add aseqnet (371f5a26)
+
+Robbie Harwood (1):
+- feat(service): add MPD (Music Player Daemon) (bf7bbee4)
+
+Stefan Paetow (1):
+- feat(service): Add Radsec protocol (01546d04)
+
+Uriel (1):
+- feat(service): add SlimeVR (b0e0a757)
+
+</p>
     </description>
   </release>
-  <release version="2.2.3" date="2024-10-17" type="stable">
+  <release version="v2.2.3" date="2024-10-17" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.3</url>
     <description>
-      <ul>
-        <li>fix(container): add missing python3-dbus dependency (63bbcda8)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Mark Farrell (1):
+- fix(container): add missing python3-dbus dependency (63bbcda8)
+
+</p>
     </description>
   </release>
-  <release version="2.2.2" date="2024-10-17" type="stable">
+  <release version="v2.2.2" date="2024-10-17" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.2</url>
     <description>
-      <ul>
-        <li>fix(appdata): Mark metainfo translatable (6f94c836)</li>
-        <li>fix(firewall-config): Add long labels into a scrolled window (b56d6a6e)</li>
-        <li>fix(appdata): Add translation tag (8c83caef)</li>
-        <li>fix(policy): timeout argument for rich rules (b68fa318)</li>
-        <li>fix(offline): do not attempt failsafe on failure (aceadb7f)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Balló György (3):
+- fix(appdata): Mark metainfo translatable (6f94c836)
+- fix(firewall-config): Add long labels into a scrolled window (b56d6a6e)
+- fix(appdata): Add translation tag (8c83caef)
+
+Eric Garver (2):
+- fix(policy): timeout argument for rich rules (b68fa318)
+- fix(offline): do not attempt failsafe on failure (aceadb7f)
+
+</p>
     </description>
   </release>
-  <release version="2.2.1" date="2024-07-24" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.1</url>
-    <description>
-      <ul>
-        <li>fix(Dockerfile): bump to centos stream9 (dbdc3184)</li>
-        <li>fix(systemd): do not use NoNewPrivileges=Yes (86455c07)</li>
-        <li>fix(rpm): remove bogus initrddir file (4e7bb9a6)</li>
-        <li>fix(nftables): make sure probe table is deleted (5ebd818f)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.2.0" date="2024-07-11" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.0</url>
-    <description>
-      <ul>
-        <li>feat(service): added Steam LAN transfer (58c167bc)</li>
-        <li>feat(IPv6_rpfilter): support loose rpfilter (669524a1)</li>
-        <li>feat(IPv6_rpfilter): support loose-forward rpfilter (fb692d2e)</li>
-        <li>feat(IPv6_rpfilter): support strict-forward rpfilter (98e5cbb8)</li>
-        <li>feat(nftables): table ownership (becd083f)</li>
-        <li>feat(service): stun and stuns protocols (33518305)</li>
-        <li>feat: add a service for MNPD protocol (94dc89b1)</li>
-        <li>feat(service): (x)rootd file server (365fdcd0)</li>
-        <li>feat(service): add WS-Discovery host (984c321f)</li>
-        <li>feat: add iperf{2,3} services (a21b401f)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.1.4" date="2024-10-17" type="stable">
+  <release version="v2.1.4" date="2024-10-17" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.4</url>
     <description>
-      <ul>
-        <li>fix(appdata): Mark metainfo translatable (3a1fb8ee)</li>
-        <li>fix(firewall-config): Add long labels into a scrolled window (c1e4f44a)</li>
-        <li>fix(appdata): Add translation tag (cbe259c0)</li>
-        <li>fix(Dockerfile): bump to centos stream9 (3107293e)</li>
-        <li>fix(rpm): remove bogus initrddir file (524939de)</li>
-        <li>fix(policy): timeout argument for rich rules (7048571c)</li>
-        <li>fix(offline): do not attempt failsafe on failure (d832165f)</li>
-        <li>fix(container): add missing python3-dbus dependency (ec9b39b7)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Balló György (3):
+- fix(appdata): Mark metainfo translatable (3a1fb8ee)
+- fix(firewall-config): Add long labels into a scrolled window (c1e4f44a)
+- fix(appdata): Add translation tag (cbe259c0)
+
+Eric Garver (4):
+- fix(Dockerfile): bump to centos stream9 (3107293e)
+- fix(rpm): remove bogus initrddir file (524939de)
+- fix(policy): timeout argument for rich rules (7048571c)
+- fix(offline): do not attempt failsafe on failure (d832165f)
+
+Mark Farrell (1):
+- fix(container): add missing python3-dbus dependency (ec9b39b7)
+
+</p>
     </description>
   </release>
-  <release version="2.1.3" date="2024-07-11" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.3</url>
-    <description>
-      <ul>
-        <li>fix(firewall-applet): Set fallback icons (ed85add5)</li>
-        <li>fix(appdata): Update URLs (309fb2eb)</li>
-        <li>fix(firewall-config): Set width request for long label (dcd9c2fc)</li>
-        <li>fix(polkit): allow 60 seconds for authorization (6669d784)</li>
-        <li>fix(service): update highest port number for ceph (287d78d2)</li>
-        <li>fix(translation): several translations have a bad value for "Interfaces" (752d3c24)</li>
-        <li>fix(functions): fix functions.wrong_args_for_callable() (e73f60b0)</li>
-        <li>fix(translation): fix bogus format string in "po/sl.po" (d94749dd)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.1.2" date="2024-04-12" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.2</url>
-    <description>
-      <ul>
-        <li>fix(policy): allow forward ports w/ to-addr for egress-zone=HOST (c01891f2)</li>
-        <li>fix(rich): fix range check for large rule limit (64cb406b)</li>
-        <li>fix(tests): fix skip detection in fw-in-container environment (7f3590f4)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.1.1" date="2024-01-29" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.1</url>
-    <description>
-      <ul>
-        <li>fix(offline-cmd): use family when creating ipset (64f78a9d)</li>
-        <li>fix(firewall-config): allow rich rule forwarded ports to be logged (d46ea62e)</li>
-        <li>fix(ipXtables): log forwarded ports only (07dc202e)</li>
-        <li>fix(nftables): log forwarded ports (5c26b73e)</li>
-        <li>fix(io.ipset): raise exception if entries exceed limit (a2da5fba)</li>
-        <li>fix(policy): ipXtables: multiple policies using same zone (b6f2f096)</li>
-        <li>fix(policy): dispatch update for active policies (7f6f0e2c)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.1.0" date="2024-01-05" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.0</url>
-    <description>
-      <ul>
-        <li>feat(service): add DNS over QUIC (DoQ) Service (5130430c)</li>
-        <li>feat(icmp): add ICMPv6 Multicast Listener Discovery (MLD) types (dd88bbf8)</li>
-        <li>feat(fw): add ReloadPolicy option in firewalld.conf (0019371a)</li>
-        <li>feat(service): add submission service (tcp 587) (d6a95612)</li>
-        <li>feat(service): Add alvr (3a92358e)</li>
-        <li>feat(service): add vrrp (d62fc8db)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.0.6" date="2024-10-17" type="stable">
+  <release version="v2.0.6" date="2024-10-17" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.6</url>
     <description>
-      <ul>
-        <li>fix(appdata): Mark metainfo translatable (8283b94f)</li>
-        <li>fix(firewall-config): Add long labels into a scrolled window (0edeb636)</li>
-        <li>fix(appdata): Add translation tag (05792f6e)</li>
-        <li>fix(Dockerfile): bump to centos stream9 (22754ae8)</li>
-        <li>fix(rpm): remove bogus initrddir file (8ab6886d)</li>
-        <li>fix(offline): do not attempt failsafe on failure (f4b503d1)</li>
-        <li>fix(container): add missing python3-dbus dependency (d366b949)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Balló György (3):
+- fix(appdata): Mark metainfo translatable (8283b94f)
+- fix(firewall-config): Add long labels into a scrolled window (0edeb636)
+- fix(appdata): Add translation tag (05792f6e)
+
+Eric Garver (3):
+- fix(Dockerfile): bump to centos stream9 (22754ae8)
+- fix(rpm): remove bogus initrddir file (8ab6886d)
+- fix(offline): do not attempt failsafe on failure (f4b503d1)
+
+Mark Farrell (1):
+- fix(container): add missing python3-dbus dependency (d366b949)
+
+</p>
     </description>
   </release>
-  <release version="2.0.5" date="2024-07-11" type="stable">
+  <release version="v2.2.1" date="2024-07-24" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.1</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (4):
+- fix(Dockerfile): bump to centos stream9 (dbdc3184)
+- fix(systemd): do not use NoNewPrivileges=Yes (86455c07)
+- fix(rpm): remove bogus initrddir file (4e7bb9a6)
+- fix(nftables): make sure probe table is deleted (5ebd818f)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.2.0" date="2024-07-11" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.2.0</url>
+    <description>
+      <p>This is a feature release. It also includes all bug fixes since v2.1.0.
+
+DanMan (1):
+- feat(service): added Steam LAN transfer (58c167bc)
+
+Eric Garver (4):
+- feat(IPv6_rpfilter): support loose rpfilter (669524a1)
+- feat(IPv6_rpfilter): support loose-forward rpfilter (fb692d2e)
+- feat(IPv6_rpfilter): support strict-forward rpfilter (98e5cbb8)
+- feat(nftables): table ownership (becd083f)
+
+Maddy (1):
+- feat(service): stun and stuns protocols (33518305)
+
+Mariusz Fik (1):
+- feat: add a service for MNPD protocol (94dc89b1)
+
+Pat Riehecky (1):
+- feat(service): (x)rootd file server (365fdcd0)
+
+Steffen Christgau (1):
+- feat(service): add WS-Discovery host (984c321f)
+
+cyqsimon (1):
+- feat: add iperf{2,3} services (a21b401f)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.1.3" date="2024-07-11" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.3</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Balló György (3):
+- fix(firewall-applet): Set fallback icons (ed85add5)
+- fix(appdata): Update URLs (309fb2eb)
+- fix(firewall-config): Set width request for long label (dcd9c2fc)
+
+Eric Garver (1):
+- fix(polkit): allow 60 seconds for authorization (6669d784)
+
+Pierre Riteau (1):
+- fix(service): update highest port number for ceph (287d78d2)
+
+Sam Morris (1):
+- fix(translation): several translations have a bad value for "Interfaces" (752d3c24)
+
+Thomas Haller (2):
+- fix(functions): fix functions.wrong_args_for_callable() (e73f60b0)
+- fix(translation): fix bogus format string in "po/sl.po" (d94749dd)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.0.5" date="2024-07-11" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.5</url>
     <description>
-      <ul>
-        <li>fix(firewall-applet): Set fallback icons (17ff445d)</li>
-        <li>fix(appdata): Update URLs (a5f4e6a7)</li>
-        <li>fix(firewall-config): Set width request for long label (0190628d)</li>
-        <li>fix(polkit): allow 60 seconds for authorization (faf6e703)</li>
-        <li>fix(service): update highest port number for ceph (655f395a)</li>
-        <li>fix(translation): several translations have a bad value for "Interfaces" (3f8d1b84)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Balló György (3):
+- fix(firewall-applet): Set fallback icons (17ff445d)
+- fix(appdata): Update URLs (a5f4e6a7)
+- fix(firewall-config): Set width request for long label (0190628d)
+
+Eric Garver (1):
+- fix(polkit): allow 60 seconds for authorization (faf6e703)
+
+Pierre Riteau (1):
+- fix(service): update highest port number for ceph (655f395a)
+
+Sam Morris (1):
+- fix(translation): several translations have a bad value for "Interfaces" (3f8d1b84)
+
+</p>
     </description>
   </release>
-  <release version="2.0.4" date="2024-04-12" type="stable">
+  <release version="v2.1.2" date="2024-04-12" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.2</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (1):
+- fix(policy): allow forward ports w/ to-addr for egress-zone=HOST (c01891f2)
+
+Thomas Haller (2):
+- fix(rich): fix range check for large rule limit (64cb406b)
+- fix(tests): fix skip detection in fw-in-container environment (7f3590f4)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.0.4" date="2024-04-12" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.4</url>
     <description>
-      <ul>
-        <li>fix(policy): allow forward ports w/ to-addr for egress-zone=HOST (e8a234fe)</li>
-        <li>fix(rich): fix range check for large rule limit (ca19dfd9)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Eric Garver (1):
+- fix(policy): allow forward ports w/ to-addr for egress-zone=HOST (e8a234fe)
+
+Thomas Haller (1):
+- fix(rich): fix range check for large rule limit (ca19dfd9)
+
+</p>
     </description>
   </release>
-  <release version="2.0.3" date="2024-01-29" type="stable">
+  <release version="v2.1.1" date="2024-01-29" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.1</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Donald Yandt (5):
+- fix(offline-cmd): use family when creating ipset (64f78a9d)
+- fix(firewall-config): allow rich rule forwarded ports to be logged (d46ea62e)
+- fix(ipXtables): log forwarded ports only (07dc202e)
+- fix(nftables): log forwarded ports (5c26b73e)
+- fix(io.ipset): raise exception if entries exceed limit (a2da5fba)
+
+Eric Garver (2):
+- fix(policy): ipXtables: multiple policies using same zone (b6f2f096)
+- fix(policy): dispatch update for active policies (7f6f0e2c)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.0.3" date="2024-01-29" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.3</url>
     <description>
-      <ul>
-        <li>fix(offline-cmd): use family when creating ipset (4256ba1b)</li>
-        <li>fix(firewall-config): allow rich rule forwarded ports to be logged (842a144a)</li>
-        <li>fix(ipXtables): log forwarded ports only (e14f9d7e)</li>
-        <li>fix(nftables): log forwarded ports (faed4916)</li>
-        <li>fix(io.ipset): raise exception if entries exceed limit (ff3b8b55)</li>
-        <li>fix(policy): ipXtables: multiple policies using same zone (9b94f63d)</li>
-        <li>fix(policy): dispatch update for active policies (f7444579)</li>
-        <li>fix(rich): validate service name of rich rule (1ce3a4d3)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Donald Yandt (5):
+- fix(offline-cmd): use family when creating ipset (4256ba1b)
+- fix(firewall-config): allow rich rule forwarded ports to be logged (842a144a)
+- fix(ipXtables): log forwarded ports only (e14f9d7e)
+- fix(nftables): log forwarded ports (faed4916)
+- fix(io.ipset): raise exception if entries exceed limit (ff3b8b55)
+
+Eric Garver (2):
+- fix(policy): ipXtables: multiple policies using same zone (9b94f63d)
+- fix(policy): dispatch update for active policies (f7444579)
+
+Thomas Haller (1):
+- fix(rich): validate service name of rich rule (1ce3a4d3)
+
+</p>
     </description>
   </release>
-  <release version="2.0.2" date="2023-11-28" type="stable">
+  <release version="v2.1.0" date="2024-01-05" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.1.0</url>
+    <description>
+      <p>This is a feature release. It also includes all bug fixes since v2.0.0.
+
+Thomas Haller (3):
+- feat(service): add DNS over QUIC (DoQ) Service (5130430c)
+- feat(icmp): add ICMPv6 Multicast Listener Discovery (MLD) types (dd88bbf8)
+- feat(fw): add ReloadPolicy option in firewalld.conf (0019371a)
+
+Vinícius Ferrão (1):
+- feat(service): add submission service (tcp 587) (d6a95612)
+
+Vixea (1):
+- feat(service): Add alvr (3a92358e)
+
+nser77 (1):
+- feat(service): add vrrp (d62fc8db)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.0.2" date="2023-11-28" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.2</url>
     <description>
-      <ul>
-        <li>fix(policy): runtime dispatch update if *-zone=ANY (e8b96374)</li>
-        <li>fix(nm): release NM client after a timeout (d534f074)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Eric Garver (2):
+- fix(policy): runtime dispatch update if *-zone=ANY (e8b96374)
+- fix(nm): release NM client after a timeout (d534f074)
+
+</p>
     </description>
   </release>
-  <release version="2.0.1" date="2023-10-02" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.1</url>
-    <description>
-      <ul>
-        <li>fix(cli): all --list-all-zones output identical (d30bc61e)</li>
-        <li>fix(cli): properly show default zone attribute (ea8d9a87)</li>
-        <li>fix(cli): properly show active attribute for zones and policies (b2024038)</li>
-        <li>fix(cli): --get-active-zones should include the default zone (dae9112b)</li>
-        <li>fix(nftables): always flush main table on start (cd209811)</li>
-        <li>fix(runtimeToPermanent): deepcopy settings before mangling (9c536394)</li>
-        <li>docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (1c772059)</li>
-        <li>fix(firewall-config): escape markup stored in bindings store (c876fd04)</li>
-        <li>fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (29351195)</li>
-        <li>fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (af3c35b4)</li>
-        <li>fix(ipset): fix configuring IP range for ipsets with nftables (6a050ec2)</li>
-        <li>fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (7d3340c0)</li>
-        <li>fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (ff612093)</li>
-        <li>docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in &lt;code&gt;man firewalld.policy&lt;/code&gt; (21026d91)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="2.0.0" date="2023-06-23" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.0</url>
-    <description>
-      <ul>
-        <li>software fast path</li>
-        <li>zone priorities</li>
-        <li>b7faa74db15e ("feat(direct): avoid iptables flush if using nftables backend")</li>
-        <li>cb1d47611131 ("feat(zone): add support for priority")</li>
-        <li>a0d0a760db4b ("feat(nftables): add support for flowtable (software fastpath)")</li>
-        <li>99894f70e313 ("feat(nftables): support counters")</li>
-        <li>db13db701b85 ("feat(service): add Zabbix Java Gateway")</li>
-        <li>81b17fd5da35 ("feat(service): add Zabbix Web Service")</li>
-        <li>3127b16cb566 ("feat(service): add game 0AD")</li>
-        <li>eac23ccb0772 ("feat(service): add game anno 1602")</li>
-        <li>547a9ecad827 ("feat(service): add game anno 1800")</li>
-        <li>ab5e46893cf1 ("feat(service): add game Civilization IV")</li>
-        <li>edbcaecb13b8 ("feat(service): add game Civilization V")</li>
-        <li>d99683cae26e ("feat(service): add game factorio")</li>
-        <li>4697e148aaa8 ("feat(service): add game Minecraft")</li>
-        <li>69649c599e63 ("feat(service): add game Need For Speed: Most Wanted")</li>
-        <li>a87426fd99d7 ("feat(service): add game Stellaris")</li>
-        <li>1f7d664a6f31 ("feat(service): add game Stronghold Crusader")</li>
-        <li>aa6bce9149c5 ("feat(service): add game Super Tux kart")</li>
-        <li>2c246f3224c7 ("feat(service): add game Terraria")</li>
-        <li>4d5bef92ac09 ("feat(service): add game Zero K")</li>
-        <li>e9fc8c812bf7 ("feat(service): add game Settlers")</li>
-        <li>77c7061cc191 ("feat(service): add OpenTelemetry (OTLP) service")</li>
-        <li>c2a6c8fc6315 ("feat(service): define statsrv from RFC 996")</li>
-        <li>2b58cb7d4a97 ("feat(service): Add syscomlan")</li>
-      </ul>
-    </description>
-  </release>
-  <release version="1.3.4" date="2023-10-02" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.4</url>
-    <description>
-      <ul>
-        <li>fix(nftables): always flush main table on start (4b005c26)</li>
-        <li>fix(runtimeToPermanent): deepcopy settings before mangling (7d0618b1)</li>
-        <li>docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (047f64e7)</li>
-        <li>fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (ebf398c5)</li>
-        <li>fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (762fbf4f)</li>
-        <li>fix(ipset): fix configuring IP range for ipsets with nftables (5c5924b0)</li>
-        <li>fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (60bf2928)</li>
-        <li>fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (f7bc46cd)</li>
-        <li>docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in &lt;code&gt;man firewalld.policy&lt;/code&gt; (56eaf880)</li>
-        <li>fix(applet): ActivationReason.Trigger (0bfffb3f)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="1.3.3" date="2023-06-14" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.3</url>
-    <description>
-      <ul>
-        <li>fix(reload): restore policy for old backend if it changed (de85849e)</li>
-        <li>fix(io): rich: tcp mss: handle value=None (8016f100)</li>
-        <li>fix(firewall-config): rich: set destination address (f6641a96)</li>
-        <li>fix(policy): mixed IP families in ingress/egress (69ed4d63)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="1.3.2" date="2023-04-21" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.2</url>
-    <description>
-      <ul>
-        <li>test(container): add centos9-stream (b7bb3d0)</li>
-        <li>test(functions): iptables: normalize protocols to numeric values (33a1b16)</li>
-        <li>test(functions): ip6tables: normalize opt field output (eeac39c)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="1.3.1" date="2023-04-13" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.1</url>
-    <description>
-      <ul>
-        <li>fix(fw_nm): use IP interface names for connection lookup (18c8b810)</li>
-        <li>fix(fw_policy): raise exceptions (5ae9322d)</li>
-        <li>fix(service): include: when used with rich rule (986f0be5)</li>
-        <li>fix(nftables): rich: log: limit was not taking effect (0dc0575e)</li>
-        <li>fix(build): rpm must build all as prerequisite (6896748e)</li>
-        <li>fix: use error codes for FirewallError instances (370e5f2f)</li>
-        <li>fix(ipset): chunk entries when restoring set (8a888554)</li>
-        <li>fix(applet): allows using KDE network connection editor (29c8ef65)</li>
-      </ul>
-    </description>
-  </release>
-  <release version="1.2.7" date="2023-10-03" type="stable">
+  <release version="v1.2.7" date="2023-10-03" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v1.2.7</url>
     <description>
-      <ul>
-        <li>fix(nftables): always flush main table on start (47914f61)</li>
-        <li>fix(runtimeToPermanent): deepcopy settings before mangling (c9a03ade)</li>
-        <li>docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (c7b76147)</li>
-        <li>fix(firewall-config): escape markup stored in bindings store (703d2646)</li>
-        <li>fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (0b7dd078)</li>
-        <li>fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (bfe09f49)</li>
-        <li>fix(ipset): fix configuring IP range for ipsets with nftables (3330e49e)</li>
-        <li>fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (1c3c5eba)</li>
-        <li>fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (0b272b74)</li>
-        <li>docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in &lt;code&gt;man firewalld.policy&lt;/code&gt; (64014611)</li>
-        <li>fix(applet): ActivationReason.Trigger (b20194be)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Eric Garver (2):
+- fix(nftables): always flush main table on start (47914f61)
+- fix(runtimeToPermanent): deepcopy settings before mangling (c9a03ade)
+
+Michael Biebl (1):
+- docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (c7b76147)
+
+Sam Morris (1):
+- fix(firewall-config): escape markup stored in bindings store (703d2646)
+
+Thomas Haller (6):
+- fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (0b7dd078)
+- fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (bfe09f49)
+- fix(ipset): fix configuring IP range for ipsets with nftables (3330e49e)
+- fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (1c3c5eba)
+- fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (0b272b74)
+- docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in `man firewalld.policy` (64014611)
+
+till busch (1):
+- fix(applet): ActivationReason.Trigger (b20194be)
+
+</p>
     </description>
   </release>
-  <release version="1.2.6" date="2023-06-14" type="stable">
+  <release version="v2.0.1" date="2023-10-02" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.1</url>
+    <description>
+      <p>This is a bug fix only release.&#13;
+&#13;
+Eric Garver (6):&#13;
+- fix(cli): all --list-all-zones output identical (d30bc61e)&#13;
+- fix(cli): properly show default zone attribute (ea8d9a87)&#13;
+- fix(cli): properly show active attribute for zones and policies (b2024038)&#13;
+- fix(cli): --get-active-zones should include the default zone (dae9112b)&#13;
+- fix(nftables): always flush main table on start (cd209811)&#13;
+- fix(runtimeToPermanent): deepcopy settings before mangling (9c536394)&#13;
+&#13;
+Michael Biebl (1):&#13;
+- docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (1c772059)&#13;
+&#13;
+Sam Morris (1):&#13;
+- fix(firewall-config): escape markup stored in bindings store (c876fd04)&#13;
+&#13;
+Thomas Haller (6):&#13;
+- fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (29351195)&#13;
+- fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (af3c35b4)&#13;
+- fix(ipset): fix configuring IP range for ipsets with nftables (6a050ec2)&#13;
+- fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (7d3340c0)&#13;
+- fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (ff612093)&#13;
+- docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in `man firewalld.policy` (21026d91)&#13;
+&#13;
+</p>
+    </description>
+  </release>
+  <release version="v1.3.4" date="2023-10-02" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.4</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (2):
+- fix(nftables): always flush main table on start (4b005c26)
+- fix(runtimeToPermanent): deepcopy settings before mangling (7d0618b1)
+
+Michael Biebl (1):
+- docs: fix reference to lockdown-whitelist.xml in SYNOPSIS section (047f64e7)
+
+Thomas Haller (6):
+- fix(tests): avoid deprecated assertRaisesRegexp for assertRaisesRegex (ebf398c5)
+- fix(icmp): fix check_icmpv6_name() to use correct IPv6 names (762fbf4f)
+- fix(ipset): fix configuring IP range for ipsets with nftables (5c5924b0)
+- fix(ipset): fix configuring "timeout","maxelem" values for ipsets with nftables (60bf2928)
+- fix(core): fix exception while parsing invalid "tcp-mss-clamp" in policy (f7bc46cd)
+- docs(policy): fix wrong documentation of &lt;tcp-mss-clamp/&gt; in `man firewalld.policy` (56eaf880)
+
+till busch (1):
+- fix(applet): ActivationReason.Trigger (0bfffb3f)
+
+</p>
+    </description>
+  </release>
+  <release version="v2.0.0" date="2023-06-23" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v2.0.0</url>
+    <description>
+      <p>This is a major release. The major version is being bumped symbolically to reflect significant changes done in commit f4d2b80adc84 ("fix(policy): disallow zone drifting"). It does not contain any deliberate breaking changes.&#13;
+&#13;
+Feature Blogs:&#13;
+- [software fast path](https://firewalld.org/2023/05/nftables-flowtable)&#13;
+- [zone priorities](https://firewalld.org/2023/04/zone-priorities)&#13;
+&#13;
+Additionally the release contains the below new features.&#13;
+&#13;
+Eric Garver (4):&#13;
+- b7faa74db15e ("feat(direct): avoid iptables flush if using nftables backend")&#13;
+- cb1d47611131 ("feat(zone): add support for priority")&#13;
+- a0d0a760db4b ("feat(nftables): add support for flowtable (software fastpath)")&#13;
+- 99894f70e313 ("feat(nftables): support counters")&#13;
+&#13;
+Juris Lambda (2):&#13;
+- db13db701b85 ("feat(service): add Zabbix Java Gateway")&#13;
+- 81b17fd5da35 ("feat(service): add Zabbix Web Service")&#13;
+&#13;
+Nikolas Koesling (14):&#13;
+- 3127b16cb566 ("feat(service): add game 0AD")&#13;
+- eac23ccb0772 ("feat(service): add game anno 1602")&#13;
+- 547a9ecad827 ("feat(service): add game anno 1800")&#13;
+- ab5e46893cf1 ("feat(service): add game Civilization IV")&#13;
+- edbcaecb13b8 ("feat(service): add game Civilization V")&#13;
+- d99683cae26e ("feat(service): add game factorio")&#13;
+- 4697e148aaa8 ("feat(service): add game Minecraft")&#13;
+- 69649c599e63 ("feat(service): add game Need For Speed: Most Wanted")&#13;
+- a87426fd99d7 ("feat(service): add game Stellaris")&#13;
+- 1f7d664a6f31 ("feat(service): add game Stronghold Crusader")&#13;
+- aa6bce9149c5 ("feat(service): add game Super Tux kart")&#13;
+- 2c246f3224c7 ("feat(service): add game Terraria")&#13;
+- 4d5bef92ac09 ("feat(service): add game Zero K")&#13;
+- e9fc8c812bf7 ("feat(service): add game Settlers")&#13;
+&#13;
+Pat Riehecky (3):&#13;
+- 77c7061cc191 ("feat(service): add OpenTelemetry (OTLP) service")&#13;
+- c2a6c8fc6315 ("feat(service): define statsrv from RFC 996")&#13;
+- 2b58cb7d4a97 ("feat(service): Add syscomlan")&#13;
+&#13;
+&#13;
+</p>
+    </description>
+  </release>
+  <release version="v1.3.3" date="2023-06-14" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.3</url>
+    <description>
+      <p>This is a bug fix only release.
+
+Eric Garver (4):
+- fix(reload): restore policy for old backend if it changed (de85849e)
+- fix(io): rich: tcp mss: handle value=None (8016f100)
+- fix(firewall-config): rich: set destination address (f6641a96)
+- fix(policy): mixed IP families in ingress/egress (69ed4d63)
+
+</p>
+    </description>
+  </release>
+  <release version="v1.2.6" date="2023-06-14" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v1.2.6</url>
     <description>
-      <ul>
-        <li>fix(reload): restore policy for old backend if it changed (fa4f4863)</li>
-        <li>fix(io): rich: tcp mss: handle value=None (52a754ef)</li>
-        <li>fix(firewall-config): rich: set destination address (ab92c097)</li>
-        <li>fix(policy): mixed IP families in ingress/egress (d9e4b96a)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Eric Garver (4):
+- fix(reload): restore policy for old backend if it changed (fa4f4863)
+- fix(io): rich: tcp mss: handle value=None (52a754ef)
+- fix(firewall-config): rich: set destination address (ab92c097)
+- fix(policy): mixed IP families in ingress/egress (d9e4b96a)
+
+</p>
     </description>
   </release>
-  <release version="1.2.5" date="2023-04-13" type="stable">
-    <url>https://github.com/firewalld/firewalld/releases/tag/v1.2.5</url>
+  <release version="v1.3.2" date="2023-04-21" type="stable">
+    <url>https://github.com/firewalld/firewalld/releases/tag/v1.3.2</url>
     <description>
-      <ul>
-        <li>fix(ipset): chunk entries when restoring set (73a49e2e)</li>
-      </ul>
+      <p>This is a bug fix only release.&#13;
+&#13;
+- test(container): add centos9-stream (b7bb3d0)&#13;
+- test(functions): iptables: normalize protocols to numeric values (33a1b16)&#13;
+- test(functions): ip6tables: normalize opt field output (eeac39c)</p>
     </description>
   </release>
-  <release version="0.9.11" date="2023-04-18" type="stable">
+  <release version="v0.9.11" date="2023-04-18" type="stable">
     <url>https://github.com/firewalld/firewalld/releases/tag/v0.9.11</url>
     <description>
-      <ul>
-        <li>fix(fw_nm): use IP interface names for connection lookup (d8bfa1db)</li>
-        <li>fix(firewall-config): deprecation warnings (176e501a)</li>
-        <li>fix(firewall-config): invalid iterator (0da9e54f)</li>
-        <li>fix(service): include: when used with rich rule (fd5570dd)</li>
-        <li>fix(nftables): rich: log: limit was not taking effect (5dd75ca8)</li>
-        <li>fix(ipset): chunk entries when restoring set (714f9634)</li>
-        <li>fix(applet): allows using KDE network connection editor (d8fbb3bb)</li>
-      </ul>
+      <p>This is a bug fix only release.
+
+Aidan MacDonald (1):
+- fix(fw_nm): use IP interface names for connection lookup (d8bfa1db)
+
+Donald Yandt (2):
+- fix(firewall-config): deprecation warnings (176e501a)
+- fix(firewall-config): invalid iterator (0da9e54f)
+
+Eric Garver (3):
+- fix(service): include: when used with rich rule (fd5570dd)
+- fix(nftables): rich: log: limit was not taking effect (5dd75ca8)
+- fix(ipset): chunk entries when restoring set (714f9634)
+
+Zesko (1):
+- fix(applet): allows using KDE network connection editor (d8fbb3bb)
+
+</p>
     </description>
   </release>
 </releases>
